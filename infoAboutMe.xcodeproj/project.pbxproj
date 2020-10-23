@@ -9,23 +9,27 @@
 /* Begin PBXBuildFile section */
 		E4D5EE49254287F2000426F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D5EE48254287F2000426F2 /* AppDelegate.swift */; };
 		E4D5EE4B254287F2000426F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D5EE4A254287F2000426F2 /* SceneDelegate.swift */; };
-		E4D5EE4D254287F2000426F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D5EE4C254287F2000426F2 /* ViewController.swift */; };
 		E4D5EE50254287F2000426F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4D5EE4E254287F2000426F2 /* Main.storyboard */; };
 		E4D5EE52254287F5000426F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4D5EE51254287F5000426F2 /* Assets.xcassets */; };
 		E4D5EE55254287F5000426F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4D5EE53254287F5000426F2 /* LaunchScreen.storyboard */; };
 		E4D5EE5F2542A5FD000426F2 /* helloUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D5EE5E2542A5FD000426F2 /* helloUserViewController.swift */; };
+		E4D5EE6F2542BCCC000426F2 /* LogginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D5EE6E2542BCCC000426F2 /* LogginPageViewController.swift */; };
+		E4D5EE732542C2D2000426F2 /* IdentificationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D5EE722542C2D2000426F2 /* IdentificationInfo.swift */; };
+		E4D5EE762542CC0A000426F2 /* TypeOfAlertMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D5EE752542CC0A000426F2 /* TypeOfAlertMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E4D5EE45254287F2000426F2 /* infoAboutMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = infoAboutMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D5EE48254287F2000426F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4D5EE4A254287F2000426F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E4D5EE4C254287F2000426F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E4D5EE4F254287F2000426F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E4D5EE51254287F5000426F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4D5EE54254287F5000426F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4D5EE56254287F5000426F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4D5EE5E2542A5FD000426F2 /* helloUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helloUserViewController.swift; sourceTree = "<group>"; };
+		E4D5EE6E2542BCCC000426F2 /* LogginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogginPageViewController.swift; sourceTree = "<group>"; };
+		E4D5EE722542C2D2000426F2 /* IdentificationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentificationInfo.swift; sourceTree = "<group>"; };
+		E4D5EE752542CC0A000426F2 /* TypeOfAlertMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfAlertMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +62,42 @@
 		E4D5EE47254287F2000426F2 /* infoAboutMe */ = {
 			isa = PBXGroup;
 			children = (
+				E4D5EE51254287F5000426F2 /* Assets.xcassets */,
 				E4D5EE48254287F2000426F2 /* AppDelegate.swift */,
 				E4D5EE4A254287F2000426F2 /* SceneDelegate.swift */,
-				E4D5EE4C254287F2000426F2 /* ViewController.swift */,
-				E4D5EE4E254287F2000426F2 /* Main.storyboard */,
-				E4D5EE51254287F5000426F2 /* Assets.xcassets */,
-				E4D5EE53254287F5000426F2 /* LaunchScreen.storyboard */,
 				E4D5EE56254287F5000426F2 /* Info.plist */,
-				E4D5EE5E2542A5FD000426F2 /* helloUserViewController.swift */,
+				E4D5EE672542B571000426F2 /* viewControllers */,
+				E4D5EE662542B509000426F2 /* storyboards */,
+				E4D5EE652542B4E7000426F2 /* models */,
 			);
 			path = infoAboutMe;
+			sourceTree = "<group>";
+		};
+		E4D5EE652542B4E7000426F2 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				E4D5EE722542C2D2000426F2 /* IdentificationInfo.swift */,
+				E4D5EE752542CC0A000426F2 /* TypeOfAlertMessage.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		E4D5EE662542B509000426F2 /* storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E4D5EE4E254287F2000426F2 /* Main.storyboard */,
+				E4D5EE53254287F5000426F2 /* LaunchScreen.storyboard */,
+			);
+			path = storyboards;
+			sourceTree = "<group>";
+		};
+		E4D5EE672542B571000426F2 /* viewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E4D5EE5E2542A5FD000426F2 /* helloUserViewController.swift */,
+				E4D5EE6E2542BCCC000426F2 /* LogginPageViewController.swift */,
+			);
+			path = viewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,10 +170,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4D5EE4D254287F2000426F2 /* ViewController.swift in Sources */,
+				E4D5EE732542C2D2000426F2 /* IdentificationInfo.swift in Sources */,
 				E4D5EE49254287F2000426F2 /* AppDelegate.swift in Sources */,
+				E4D5EE6F2542BCCC000426F2 /* LogginPageViewController.swift in Sources */,
 				E4D5EE5F2542A5FD000426F2 /* helloUserViewController.swift in Sources */,
 				E4D5EE4B254287F2000426F2 /* SceneDelegate.swift in Sources */,
+				E4D5EE762542CC0A000426F2 /* TypeOfAlertMessage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

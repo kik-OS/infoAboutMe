@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Loggin Page View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="infoAboutMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LogginPageViewController" customModule="infoAboutMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,9 +33,6 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdW-nt-3RW">
                                         <rect key="frame" x="0.0" y="84" width="240" height="30"/>
                                         <state key="normal" title="Войти"/>
-                                        <connections>
-                                            <segue destination="ujR-Jp-Vih" kind="presentation" modalPresentationStyle="fullScreen" id="zb2-Ty-mYJ"/>
-                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="RkI-SG-dF2">
                                         <rect key="frame" x="0.0" y="122" width="240" height="27"/>
@@ -44,11 +41,17 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="88" height="27"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <state key="normal" title="Забыли логин?"/>
+                                                <connections>
+                                                    <action selector="forgotLogin" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Cc-7p-MbA"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AFl-PM-kb2">
                                                 <rect key="frame" x="144" y="0.0" width="96" height="27"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <state key="normal" title="Забыли пароль?"/>
+                                                <connections>
+                                                    <action selector="forgotPassword" destination="BYZ-38-t0r" eventType="touchUpInside" id="n3x-Ap-o0Q"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -63,15 +66,19 @@
                             <constraint firstItem="XgI-vy-rsV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="zCl-5i-iT2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="logginTextField" destination="LVa-71-NIg" id="VZi-S2-QhI"/>
+                        <outlet property="passwordTextField" destination="Jpd-nb-mdm" id="QdL-vs-yxG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1794" y="118"/>
         </scene>
-        <!--Item-->
+        <!--Профиль-->
         <scene sceneID="ggV-xZ-9su">
             <objects>
-                <viewController id="Pue-6J-kPh" sceneMemberID="viewController">
+                <viewController id="Pue-6J-kPh" customClass="helloUserViewController" customModule="infoAboutMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T4B-O9-ugo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,19 +111,20 @@
                                         </state>
                                     </button>
                                 </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <variation key="heightClass=compact-widthClass=compact" spacing="36"/>
                                 <variation key="heightClass=compact-widthClass=regular" spacing="67"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uJs-87-VK5"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="uJs-87-VK5" firstAttribute="trailing" secondItem="rEv-0b-sjN" secondAttribute="trailing" constant="16" id="4xm-yl-fre"/>
                             <constraint firstItem="rEv-0b-sjN" firstAttribute="centerY" secondItem="T4B-O9-ugo" secondAttribute="centerY" id="wTv-om-AOF"/>
                             <constraint firstItem="rEv-0b-sjN" firstAttribute="leading" secondItem="T4B-O9-ugo" secondAttribute="leading" constant="16" id="yuS-Ix-dVg"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="sLm-wz-91S"/>
+                    <tabBarItem key="tabBarItem" title="Профиль" selectedImage="person" catalog="system" id="sLm-wz-91S"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IfZ-y5-aLC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -141,6 +149,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="person" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
