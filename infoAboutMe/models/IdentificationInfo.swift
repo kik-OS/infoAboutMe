@@ -6,6 +6,7 @@
 //
 
 struct IdentificationInfo {
-    static let login = "User"
+    static let login = "Alexey"
     static let password = "1234"
+    static let name = "Алексей Навальный"
 }

@@ -7,18 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E418BF862542EE2C004AD8F6 /* HelloUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E418BF852542EE2C004AD8F6 /* HelloUserViewController.swift */; };
+		E418BF9125430B8D004AD8F6 /* AboutPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E418BF9025430B8D004AD8F6 /* AboutPersonViewController.swift */; };
+		E418BF9425430BA3004AD8F6 /* PhotoOfPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E418BF9325430BA3004AD8F6 /* PhotoOfPersonViewController.swift */; };
 		E4D5EE49254287F2000426F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D5EE48254287F2000426F2 /* AppDelegate.swift */; };
 		E4D5EE4B254287F2000426F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D5EE4A254287F2000426F2 /* SceneDelegate.swift */; };
 		E4D5EE50254287F2000426F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4D5EE4E254287F2000426F2 /* Main.storyboard */; };
 		E4D5EE52254287F5000426F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4D5EE51254287F5000426F2 /* Assets.xcassets */; };
 		E4D5EE55254287F5000426F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4D5EE53254287F5000426F2 /* LaunchScreen.storyboard */; };
-		E4D5EE5F2542A5FD000426F2 /* helloUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D5EE5E2542A5FD000426F2 /* helloUserViewController.swift */; };
 		E4D5EE6F2542BCCC000426F2 /* LogginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D5EE6E2542BCCC000426F2 /* LogginPageViewController.swift */; };
 		E4D5EE732542C2D2000426F2 /* IdentificationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D5EE722542C2D2000426F2 /* IdentificationInfo.swift */; };
 		E4D5EE762542CC0A000426F2 /* TypeOfAlertMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D5EE752542CC0A000426F2 /* TypeOfAlertMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E418BF852542EE2C004AD8F6 /* HelloUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloUserViewController.swift; sourceTree = "<group>"; };
+		E418BF9025430B8D004AD8F6 /* AboutPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPersonViewController.swift; sourceTree = "<group>"; };
+		E418BF9325430BA3004AD8F6 /* PhotoOfPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoOfPersonViewController.swift; sourceTree = "<group>"; };
 		E4D5EE45254287F2000426F2 /* infoAboutMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = infoAboutMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D5EE48254287F2000426F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4D5EE4A254287F2000426F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,7 +31,6 @@
 		E4D5EE51254287F5000426F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4D5EE54254287F5000426F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4D5EE56254287F5000426F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E4D5EE5E2542A5FD000426F2 /* helloUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helloUserViewController.swift; sourceTree = "<group>"; };
 		E4D5EE6E2542BCCC000426F2 /* LogginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogginPageViewController.swift; sourceTree = "<group>"; };
 		E4D5EE722542C2D2000426F2 /* IdentificationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentificationInfo.swift; sourceTree = "<group>"; };
 		E4D5EE752542CC0A000426F2 /* TypeOfAlertMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfAlertMessage.swift; sourceTree = "<group>"; };
@@ -94,8 +98,10 @@
 		E4D5EE672542B571000426F2 /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				E4D5EE5E2542A5FD000426F2 /* helloUserViewController.swift */,
 				E4D5EE6E2542BCCC000426F2 /* LogginPageViewController.swift */,
+				E418BF852542EE2C004AD8F6 /* HelloUserViewController.swift */,
+				E418BF9025430B8D004AD8F6 /* AboutPersonViewController.swift */,
+				E418BF9325430BA3004AD8F6 /* PhotoOfPersonViewController.swift */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -170,11 +176,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E418BF862542EE2C004AD8F6 /* HelloUserViewController.swift in Sources */,
 				E4D5EE732542C2D2000426F2 /* IdentificationInfo.swift in Sources */,
 				E4D5EE49254287F2000426F2 /* AppDelegate.swift in Sources */,
+				E418BF9425430BA3004AD8F6 /* PhotoOfPersonViewController.swift in Sources */,
 				E4D5EE6F2542BCCC000426F2 /* LogginPageViewController.swift in Sources */,
-				E4D5EE5F2542A5FD000426F2 /* helloUserViewController.swift in Sources */,
 				E4D5EE4B254287F2000426F2 /* SceneDelegate.swift in Sources */,
+				E418BF9125430B8D004AD8F6 /* AboutPersonViewController.swift in Sources */,
 				E4D5EE762542CC0A000426F2 /* TypeOfAlertMessage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

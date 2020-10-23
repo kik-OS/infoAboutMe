@@ -33,6 +33,10 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdW-nt-3RW">
                                         <rect key="frame" x="0.0" y="84" width="240" height="30"/>
                                         <state key="normal" title="Войти"/>
+                                        <connections>
+                                            <action selector="logInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IQM-Tx-egC"/>
+                                            <segue destination="ujR-Jp-Vih" kind="presentation" modalPresentationStyle="fullScreen" id="Coa-Pk-vLg"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="RkI-SG-dF2">
                                         <rect key="frame" x="0.0" y="122" width="240" height="27"/>
@@ -75,10 +79,10 @@
             </objects>
             <point key="canvasLocation" x="1794" y="118"/>
         </scene>
-        <!--Профиль-->
+        <!--Hello User View Controller-->
         <scene sceneID="ggV-xZ-9su">
             <objects>
-                <viewController id="Pue-6J-kPh" customClass="helloUserViewController" customModule="infoAboutMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HelloUserViewController" id="Pue-6J-kPh" customClass="HelloUserViewController" customModule="infoAboutMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T4B-O9-ugo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -89,7 +93,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ffj-2N-XGd">
                                         <rect key="frame" x="13" y="0.0" width="262" height="146"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добро пожаловать, User!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z7v-Ce-695">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добро пожаловать, Us!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z7v-Ce-695">
                                                 <rect key="frame" x="0.0" y="0.0" width="262" height="69.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                                 <nil key="textColor"/>
@@ -109,6 +113,9 @@
                                         <state key="normal" title="Выйти">
                                             <color key="titleColor" systemColor="systemRedColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="logOutButton" destination="Pue-6J-kPh" eventType="touchUpInside" id="4TM-aR-lN4"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -124,11 +131,46 @@
                             <constraint firstItem="rEv-0b-sjN" firstAttribute="leading" secondItem="T4B-O9-ugo" secondAttribute="leading" constant="16" id="yuS-Ix-dVg"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Профиль" selectedImage="person" catalog="system" id="sLm-wz-91S"/>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="sLm-wz-91S"/>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="Z7v-Ce-695" id="NlQ-OV-tFp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IfZ-y5-aLC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3142.5" y="118.30985915492958"/>
+            <point key="canvasLocation" x="2479" y="921"/>
+        </scene>
+        <!--About Person View Controller-->
+        <scene sceneID="3wP-nT-77K">
+            <objects>
+                <viewController id="CeY-cQ-6fz" customClass="AboutPersonViewController" customModule="infoAboutMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kHT-Gk-uWj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4Nq-8o-xUA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="downloads" id="fYA-S0-FSC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iCM-Hg-lTc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3133" y="921"/>
+        </scene>
+        <!--Photo Of Person View Controller-->
+        <scene sceneID="y7q-T9-hPQ">
+            <objects>
+                <viewController id="DMy-Km-zZy" customClass="PhotoOfPersonViewController" customModule="infoAboutMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6yy-Tz-RqE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="40e-5g-bAr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" systemItem="favorites" id="TPq-Ab-PX1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hnc-ad-ibi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3829" y="922"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="l8R-12-wJp">
@@ -136,11 +178,14 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ujR-Jp-Vih" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="o6k-RF-3y9">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="Pue-6J-kPh" kind="relationship" relationship="viewControllers" id="HBk-Hu-q8k"/>
+                        <segue destination="CeY-cQ-6fz" kind="relationship" relationship="viewControllers" id="HVb-Ee-6ew"/>
+                        <segue destination="DMy-Km-zZy" kind="relationship" relationship="viewControllers" id="jC6-9n-991"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fF3-yl-yEe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -149,7 +194,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="person" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

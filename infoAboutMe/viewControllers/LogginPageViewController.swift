@@ -26,7 +26,41 @@ class LogginPageViewController: UIViewController {
     @IBAction func forgotPassword() {
         showAlert(title: "Пароль", message: "Ваш пароль: \(IdentificationInfo.password)", typeOfAlert: .forgotPassword)
     }
-}
+    @IBAction func logInButton(_ sender: UIButton) {
+        if logginTextField.text == IdentificationInfo.login && passwordTextField.text == IdentificationInfo.password {
+           
+
+            
+            logginTextField.text = ""
+            passwordTextField.text = ""
+            
+           
+            
+            
+            
+            
+            
+        } else {
+            showAlert(title: "Внимание", message: "Вы ввели неправильный логин или пароль", typeOfAlert: .incorrectIdentInfo)
+        }
+    }
+    
+    // MARK: - Navigation
+               override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+                let tabBarController = segue.destination as! UITabBarController
+                let helloUserVC = tabBarController.viewControllers?.first as! HelloUserViewController
+                helloUserVC.welcomeMessage += IdentificationInfo.login + "!"
+               }
+   
+    
+    }
+
+
+
+
+
+
+
 
 
 
@@ -48,14 +82,18 @@ extension LogginPageViewController {
         switch typeOfAlert {
         
         case .forgotLogin:
-            let okAction = UIAlertAction(title: "OK", style: .default)
+            let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+                self.logginTextField.text = ""
+            }
             let addAction = UIAlertAction(title: "Вставить корректный логин", style: .default) { _ in
                 self.logginTextField.text = IdentificationInfo.login
             }
             alert.addAction(okAction)
             alert.addAction(addAction)
         case .forgotPassword:
-            let okAction = UIAlertAction(title: "OK", style: .default)
+            let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+                self.passwordTextField.text = ""
+            }
             let addAction = UIAlertAction(title: "Вставить корректный пароль", style: .default) { _ in
                 self.passwordTextField.text = IdentificationInfo.password
             }
@@ -68,9 +106,6 @@ extension LogginPageViewController {
             alert.addAction(okAction)
             
         }
-        
-       
-        
         present(alert, animated: true)
     }
     
