@@ -16,6 +16,7 @@ class HelloUserViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         welcomeLabel.text = welcomeMessage
+        
     }
     
 

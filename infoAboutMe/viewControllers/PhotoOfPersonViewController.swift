@@ -8,22 +8,35 @@
 import UIKit
 
 class PhotoOfPersonViewController: UIViewController {
-
+    @IBOutlet var lightOnTesla: UIImageView!
+    @IBOutlet var lightOffTesla: UIImageView!
+    
+    @IBOutlet var lightOnTeslaLabel: UILabel!
+    @IBOutlet var lightArondLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        lightOnTesla.alpha = 0
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func lightOnOff(_ sender: UISwitch) {
+        if sender.isOn {
+            lightOnTesla.alpha = 1
+        } else {
+            lightOnTesla.alpha = 0
+        }
     }
-    */
-
+    
+    @IBAction func darkLightOnOff(_ sender: UISwitch) {
+        if sender.isOn {
+            view.backgroundColor = .white
+            lightOnTeslaLabel.textColor = .black
+            lightArondLabel.textColor = .black
+            
+        } else {
+            view.backgroundColor = .black
+            lightOnTeslaLabel.textColor = .white
+            lightArondLabel.textColor = .white
+        }
+    }
 }
