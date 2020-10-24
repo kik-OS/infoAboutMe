@@ -12,15 +12,11 @@ class AboutPersonViewController: UIViewController {
     @IBOutlet var avatarImage: UIImageView!
     @IBOutlet var avatarLabel: UILabel!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         avatarImage.layer.cornerRadius = avatarImage.frame.width / 2
         avatarLabel.text = IdentificationInfo.name
         avatarImage.layer.borderWidth = 2
         avatarImage.layer.borderColor = UIColor.systemBlue.cgColor
-        
     }
-   
-
 }

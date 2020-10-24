@@ -43,7 +43,6 @@
                                         </state>
                                         <connections>
                                             <action selector="logInButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="W6n-cr-Mwl"/>
-                                            <segue destination="ujR-Jp-Vih" kind="presentation" modalPresentationStyle="fullScreen" id="Coa-Pk-vLg"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="RkI-SG-dF2">
@@ -81,6 +80,7 @@
                     <connections>
                         <outlet property="logginTextField" destination="LVa-71-NIg" id="VZi-S2-QhI"/>
                         <outlet property="passwordTextField" destination="Jpd-nb-mdm" id="QdL-vs-yxG"/>
+                        <segue destination="ujR-Jp-Vih" kind="presentation" identifier="goToTabBar" modalPresentationStyle="fullScreen" id="gZ6-5c-JBO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -160,7 +160,7 @@
                                 <rect key="frame" x="16" y="56" width="382" height="296.66666666666669"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="8vr-I7-JZ7">
-                                        <rect key="frame" x="99.333333333333314" y="0.0" width="183.66666666666669" height="188"/>
+                                        <rect key="frame" x="99.333333333333329" y="0.0" width="183.66666666666669" height="188"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ilon" translatesAutoresizingMaskIntoConstraints="NO" id="HKg-o0-2HX">
                                                 <rect key="frame" x="22.333333333333329" y="0.0" width="139" height="139"/>

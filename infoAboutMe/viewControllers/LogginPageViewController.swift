@@ -12,11 +12,6 @@ class LogginPageViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var logginTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//    }
-    
-    
     // MARK: - Reload data in text Field before open
     override func viewWillAppear(_ animated: Bool) {
         logginTextField.text = ""
@@ -34,11 +29,9 @@ class LogginPageViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func logInButtonPressed() {
-        
-        if logginTextField.text == IdentificationInfo.login && passwordTextField.text == IdentificationInfo.password {
-            // здесь должен быть переход по segue
-            
-            
+        if logginTextField.text == IdentificationInfo.login &&
+            passwordTextField.text == IdentificationInfo.password {
+            performSegue(withIdentifier: "goToTabBar", sender: Any?.self)
         } else {
             showAlert(title: "Внимание", message: "Вы ввели неправильный логин или пароль", typeOfAlert: .incorrectIdentInfo)
         }
@@ -47,7 +40,6 @@ class LogginPageViewController: UIViewController, UITextFieldDelegate {
     //Action with return key on login field
     @IBAction func loginTextFieldReturn(_ sender: UITextField) {
         passwordTextField.becomeFirstResponder()
-        
     }
     
     //Action with return key on password field
@@ -55,7 +47,7 @@ class LogginPageViewController: UIViewController, UITextFieldDelegate {
         logInButtonPressed()
     }
     
-    // MARK: - Navigation
+    // MARK: - Prepare for segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let tabBarController = segue.destination as! UITabBarController
         let helloUserVC = tabBarController.viewControllers?.first as! HelloUserViewController
@@ -70,8 +62,6 @@ class LogginPageViewController: UIViewController, UITextFieldDelegate {
     }
 }
 
-
-
 // MARK: - Alert Controller
 extension LogginPageViewController {
     
@@ -83,7 +73,6 @@ extension LogginPageViewController {
         let alert = UIAlertController(title: title,
                                       message: message,
                                       preferredStyle: .alert)
-        
         
         switch typeOfAlert {
         
@@ -114,7 +103,5 @@ extension LogginPageViewController {
         }
         present(alert, animated: true)
     }
-    
 }
-
 
