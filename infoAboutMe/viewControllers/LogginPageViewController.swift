@@ -12,38 +12,42 @@ class LogginPageViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var logginTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         logginTextField.delegate = self
     }
-        
     
     
+  
     
+    // MARK: - Reload data in text Field before open
+    override func viewWillAppear(_ animated: Bool) {
+        logginTextField.text = ""
+        passwordTextField.text = ""
+    }
+    
+    
+    // MARK: - Action on page
     @IBAction func forgotLogin() {
-        
         showAlert(title: "Логин", message: "Ваш логин: \(IdentificationInfo.login)", typeOfAlert: .forgotLogin)
     }
     
     @IBAction func forgotPassword() {
         showAlert(title: "Пароль", message: "Ваш пароль: \(IdentificationInfo.password)", typeOfAlert: .forgotPassword)
     }
+    
     @IBAction func logInButton(_ sender: UIButton) {
         if logginTextField.text == IdentificationInfo.login && passwordTextField.text == IdentificationInfo.password {
-//            logginTextField.text = ""
-//            passwordTextField.text = ""
         } else {
             showAlert(title: "Внимание", message: "Вы ввели неправильный логин или пароль", typeOfAlert: .incorrectIdentInfo)
         }
     }
     
     
-    // MARK: - ReturnKey
+//     MARK: - ReturnKey
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         logginTextField.resignFirstResponder()
-        passwordTextField.resignFirstResponder()
            return true
     }
     
@@ -104,4 +108,5 @@ extension LogginPageViewController {
     }
     
 }
+
 
