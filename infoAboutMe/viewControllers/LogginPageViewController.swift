@@ -12,14 +12,10 @@ class LogginPageViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var logginTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        logginTextField.delegate = self
-    }
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//    }
     
-    
-  
     
     // MARK: - Reload data in text Field before open
     override func viewWillAppear(_ animated: Bool) {
@@ -37,20 +33,27 @@ class LogginPageViewController: UIViewController, UITextFieldDelegate {
         showAlert(title: "Пароль", message: "Ваш пароль: \(IdentificationInfo.password)", typeOfAlert: .forgotPassword)
     }
     
-    @IBAction func logInButton(_ sender: UIButton) {
+    @IBAction func logInButtonPressed() {
+        
         if logginTextField.text == IdentificationInfo.login && passwordTextField.text == IdentificationInfo.password {
+            // здесь должен быть переход по segue
+            
+            
         } else {
             showAlert(title: "Внимание", message: "Вы ввели неправильный логин или пароль", typeOfAlert: .incorrectIdentInfo)
         }
     }
     
-    
-//     MARK: - ReturnKey
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        logginTextField.resignFirstResponder()
-           return true
+    //Action with return key on login field
+    @IBAction func loginTextFieldReturn(_ sender: UITextField) {
+        passwordTextField.becomeFirstResponder()
+        
     }
     
+    //Action with return key on password field
+    @IBAction func passwordTextField(_ sender: UITextField) {
+        logInButtonPressed()
+    }
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -58,7 +61,12 @@ class LogginPageViewController: UIViewController, UITextFieldDelegate {
         let helloUserVC = tabBarController.viewControllers?.first as! HelloUserViewController
         guard let textFromLogginField = logginTextField.text else {return}
         helloUserVC.welcomeMessage += textFromLogginField + "!"
-       
+    }
+    
+    // MARK: - keyboard hide with tap
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        //    super .touchesBegan(touches, with: event) так не рабоатет
+        view.endEditing(true)
     }
 }
 
